@@ -30,7 +30,7 @@ if (file_exists($targetFile)) {
 // Move the file from temporary directory to the target directory
 if (move_uploaded_file($_FILES["file_name"]["tmp_name"], $targetFile)) {
    
-   if (mysqli_query($c,"INSERT INTO `files`(`id`, `name`) VALUES (null,'$filename')")){
+   if (mysqli_query($c,"INSERT INTO `files`(`id`, `filename`) VALUES (null,'$filename')")){
     echo "The file ". basename( $_FILES["file_name"]["name"]). " has been uploaded.";
     
    }
